@@ -1,11 +1,11 @@
 {
-    "name": "ssbapp",
-    "short_name": "ssbapp",
+    "name": "APEPS",
+    "short_name": "APEPS",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#FFFFFF",
+    "theme_color": "#673AB7",
+    "description": "APEPS Application",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
