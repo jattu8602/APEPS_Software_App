@@ -139,8 +139,11 @@ jobs:
         run: flutter build windows --release
 
       - name: Compress Windows Distribution Bundle
+        shell: pwsh
         run: |
-          Compress-Archive -Path build\windows\x64\runner\Release\* -DestinationPath APEPS-Windows.zip
+          New-Item -ItemType Directory -Force -Path dist\APEPS
+          Copy-Item -Path build\windows\x64\runner\Release\* -Destination dist\APEPS -Recurse
+          Compress-Archive -Path dist\APEPS -DestinationPath APEPS-Windows.zip
 
       - name: Upload Windows Standalone Package
         uses: actions/upload-artifact@v4
@@ -149,10 +152,10 @@ jobs:
           path: APEPS-Windows.zip
 
   # ─────────────────────────────────────────────────────────────────────────────
-  # 4. macOS DESKTOP BUILD (.APP Bundle)
+  # 4. macOS DESKTOP BUILD (.APP Bundle & .DMG Installer)
   # ─────────────────────────────────────────────────────────────────────────────
   build-macos:
-    name: Build macOS Desktop (.app)
+    name: Build macOS Desktop (.app & .dmg)
     runs-on: macos-latest
     steps:
       - name: Checkout repository
@@ -170,15 +173,24 @@ jobs:
       - name: Build macOS Release
         run: flutter build macos --release
 
-      - name: Compress macOS Distribution Bundle
+      - name: Package macOS DMG & ZIP
         run: |
           cd build/macos/Build/Products/Release
-          zip -r APEPS-macOS.zip *.app
+          # 1. Create standard Apple Disk Image (.dmg)
+          hdiutil create -volname "APEPS" -srcfolder APEPS.app -ov -format UDZO APEPS-macOS.dmg
+          # 2. Create ZIP preserving frameworks, symlinks and resource forks
+          ditto -c -k --sequesterRsrc --keepParent APEPS.app APEPS-macOS.zip
 
-      - name: Upload macOS Standalone Package
+      - name: Upload macOS Disk Image (DMG)
         uses: actions/upload-artifact@v4
         with:
-          name: APEPS-macOS-Desktop
+          name: APEPS-macOS-DMG
+          path: build/macos/Build/Products/Release/APEPS-macOS.dmg
+
+      - name: Upload macOS Standalone Zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: APEPS-macOS-Zip
           path: build/macos/Build/Products/Release/APEPS-macOS.zip
 
   # ─────────────────────────────────────────────────────────────────────────────
