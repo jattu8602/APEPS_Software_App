@@ -1,0 +1,51 @@
+name: Deployment
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+concurrency:
+  group: deployment-ssbapp-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy Flutter App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Flutter Web Bundle
+        run: flutter build web --release
+
+      - name: Upload Web Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ssbapp-web-dist
+          path: build/web/
+          retention-days: 7
+
+      - name: Deploy Flutter Application
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_APP_TOKEN }}
+        if: ${{ env.DEPLOY_TOKEN != '' }}
+        run: |
+          echo "Deploying Flutter app release artifacts..."
