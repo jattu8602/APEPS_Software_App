@@ -12,8 +12,16 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>APEPS</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>APEPS</string>
+	<key>NSCameraUsageDescription</key>
+	<string>APEPS needs camera access to allow you to record videos for your preparation.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>APEPS needs microphone access for your speech and training sessions.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>APEPS needs access to your files and documents.</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
