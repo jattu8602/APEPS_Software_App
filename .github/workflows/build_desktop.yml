@@ -18,6 +18,9 @@ jobs:
   build-android:
     name: Build Android (APK, AAB & Split-ABI)
     runs-on: ubuntu-latest
+    env:
+      GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=1024m"
+      JAVA_OPTS: "-Xmx4096m"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -114,6 +117,8 @@ jobs:
     runs-on: windows-latest
     env:
       CMAKE_POLICY_VERSION_MINIMUM: "3.5"
+      CL: "/D_SILENCE_EXPERIMENTAL_COROUTINE_DEPRECATION_WARNINGS /D_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS /D_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS"
+      _CL_: "/D_SILENCE_EXPERIMENTAL_COROUTINE_DEPRECATION_WARNINGS /D_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS /D_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
