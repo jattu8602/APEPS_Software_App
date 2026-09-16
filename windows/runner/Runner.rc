@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "ssbapp" "\0"
+            VALUE "CompanyName", "com.apeps" "\0"
+            VALUE "FileDescription", "APEPS" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "ssbapp" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "ssbapp.exe" "\0"
-            VALUE "ProductName", "ssbapp" "\0"
+            VALUE "InternalName", "APEPS" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 APEPS. All rights reserved." "\0"
+            VALUE "OriginalFilename", "APEPS.exe" "\0"
+            VALUE "ProductName", "APEPS" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
