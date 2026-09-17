@@ -1,4 +1,4 @@
-package com.calmchase.apeps
+package com.hiralal.apeps
 
 import android.os.Bundle
 import android.view.WindowManager

@@ -30,7 +30,7 @@ class AppConfig {
   static const String devApiUrl = "http://localhost:8000";
 
   /// Production Gateway / Backend API URL
-  static const String prodApiUrl = "https://api.calmchase.com";
+  static const String prodApiUrl = "https://api.hiralal.com";
 
   // ─────────────────────────────────────────────────────────────────────────────
   // Getters & Helpers
@@ -52,7 +52,7 @@ class AppConfig {
         host == '10.0.2.2' ||
         host == '127.0.0.1' ||
         host.contains('anugatai.com') ||
-        host.contains('calmchase.com') ||
+        host.contains('hiralal.com') ||
         url.contains('localhost:5177');
   }
 }

@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class AppReviewService {
   static final InAppReview _inAppReview = InAppReview.instance;
-  static const String _playStoreAppId = 'com.calmchase.apeps';
+  static const String _playStoreAppId = 'com.hiralal.apeps';
   static const String _prefLastPromptKey = 'last_review_prompt_timestamp';
   static const String _prefPromptCountKey = 'review_prompt_count';
 

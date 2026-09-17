@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1097816921878:android:66c98a4669bcaf86056237",
         "android_client_info": {
-          "package_name": "com.calmchase.apeps"
+          "package_name": "com.hiralal.apeps"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "1097816921878-4dqcob4ujdqeo999pbs9a301vhusf5d9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.calmchase.apeps",
+            "package_name": "com.hiralal.apeps",
             "certificate_hash": "ab5cb166b37ecd696445df783c24e34b9a137764"
           }
         },
@@ -25,7 +25,7 @@
           "client_id": "1097816921878-5892tjusu4mnoo8km7tbck7774em0ja8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.calmchase.apeps",
+            "package_name": "com.hiralal.apeps",
             "certificate_hash": "019f56a5a84dc28cf5fa7e20976600653af326c8"
           }
         },
@@ -33,7 +33,7 @@
           "client_id": "1097816921878-8gflkg4lvr3uo3aqq11ve6hs8g32goev.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.calmchase.apeps",
+            "package_name": "com.hiralal.apeps",
             "certificate_hash": "0a55e6baea0c7cced8520a9892af2f50623c0f7a"
           }
         },
@@ -41,7 +41,7 @@
           "client_id": "1097816921878-qrnp50n8kkbbdt11rs16tri56h6oeg9b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.calmchase.apeps",
+            "package_name": "com.hiralal.apeps",
             "certificate_hash": "93f6817762942ab134e2f9f6e291d4634ad2a563"
           }
         },
@@ -66,7 +66,7 @@
               "client_id": "1097816921878-3qn5re8o68m040uremqn13p02k0as2s3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.calmchase.apeps"
+                "bundle_id": "com.hiralal.apeps"
               }
             }
           ]

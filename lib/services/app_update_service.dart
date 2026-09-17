@@ -24,7 +24,7 @@ class AppUpdateCheckResult {
 }
 
 class AppUpdateService {
-  static const String _playStoreAppId = 'com.calmchase.apeps';
+  static const String _playStoreAppId = 'com.hiralal.apeps';
 
   /// Check if an app update is available on Google Play Store
   static Future<AppUpdateCheckResult> checkForUpdate() async {
