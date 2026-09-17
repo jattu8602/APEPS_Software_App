@@ -10,8 +10,8 @@ Please review and abide by our [Code of Conduct](CODE_OF_CONDUCT.md) in all comm
 
 1. **Fork & Clone**: Fork the repository and clone your fork locally:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/ssbweb.git
-   cd ssbweb
+   git clone https://github.com/YOUR-USERNAME/APEPS.git
+   cd APEPS
    ```
 
 2. **Branching**: Create a new feature/bugfix branch off `main` or `dev`:

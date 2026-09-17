@@ -1,4 +1,4 @@
-package com.calmchase.ssb
+package com.calmchase.apeps
 
 import android.os.Bundle
 import android.view.WindowManager

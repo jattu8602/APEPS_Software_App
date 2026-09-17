@@ -16,7 +16,7 @@ if (hasValidKeystore) {
 }
 
 android {
-    namespace = "com.calmchase.ssb"
+    namespace = "com.calmchase.apeps"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -42,7 +42,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.calmchase.ssb"
+        applicationId = "com.calmchase.apeps"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
